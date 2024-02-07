@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class GuestOrVerified extends  \Illuminate\Auth\Middleware\EnsureEmailIsVerified
 {
+
     /**
      * Handle an incoming request.
      *

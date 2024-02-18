@@ -18,8 +18,6 @@ import ProductsTable from './ProductsTable.vue';
 import ProductModal from './ProductModal.vue';
 import store from '../../store';
 
-
-
 const DEFAULT_PRODUCT = {
     id: '',
     title: '',

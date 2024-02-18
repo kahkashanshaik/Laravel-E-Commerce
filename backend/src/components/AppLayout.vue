@@ -1,5 +1,5 @@
 <template>
-    <div v-if="currentUser.name" class="h-full  bg-gray-200 flex">
+    <div v-if="currentUser.name" class="min-h-full  bg-gray-200 flex">
         <!--    Sidebar-->
         <Sidebar :class="{ '-ml-[160px]': !sidebarOpened }" />
         <!--/    Sidebar-->
@@ -21,7 +21,7 @@
   
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
-import Sidebar from "./SideBar.vue";
+import Sidebar from "./Sidebar.vue";
 import Navbar from "./Navbar.vue";
 import store from "../store";
 import Spinner from "./core/Spinner.vue";
@@ -43,7 +43,7 @@ function updateSidebarState() {
 
 onMounted(() => {
     store.dispatch('getCurrentUser')
-    // store.dispatch('getCountries')
+    store.dispatch('getCountries')
     updateSidebarState();
     window.addEventListener('resize', updateSidebarState)
 })

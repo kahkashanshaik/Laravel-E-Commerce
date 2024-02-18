@@ -46,7 +46,6 @@ watch(store.state.toast, (newToast) => {
         interval = setInterval(() => {
             const date = Date.now();
             percent.value = ((date - startDate) * 100) / (futureDate - startDate);
-            console.log(percent.value);
             if (percent.value >= 100) {
                 clearInterval(interval);
                 interval = null;

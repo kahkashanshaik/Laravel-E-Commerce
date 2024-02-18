@@ -94,7 +94,7 @@ class ProductController extends Controller
     {
         $data = $request->validated();
         $product = Product::find($id);
-
+        
         $data['updated_by'] = $request->user()->id;
 
         /** @var \Illuminate\Http\UploadedFile $image  */

@@ -11,7 +11,7 @@
                     <option value="25">25</option>
                     <option value="100">100</option>
                 </select>
-                <span class="ml-3">Found 0 Products</span>
+                <span class="ml-3">Found {{ products.total }} Products</span>
             </div>
             <div>
                 <input @change="getProducts()" v-model="search"
